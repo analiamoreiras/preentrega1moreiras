@@ -13,7 +13,7 @@ const Footer = (props) => {
 
     return (
 
-        <footer id="sticky-footer" class="py-4">
+        <footer id="sticky-footer" className="py-4">
             <div className='container'>
                 <small>Copyright &copy; Your Website </small>
             </div>

@@ -1,32 +1,35 @@
-//importacion:
+//----------importacion:--------------
 
 //Modulos
-
+import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom';
 //Estilos
-
 import './ItemListContainer.css';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
 
 
 //Componentes
 
+import ItemList from '../itemList/ItemList';
+
 //Core
 
 
-//Logica:
+//-----------Logica:------------
+//
 
 const ItemListContainer = (props) => {
+    const {categoriaId} = useParams()
+     return (
+        
+             <ItemList/>
+         
+        //  <div className='main-section'>
+        //     <ItemList/>
+        //  </div>   
+    );
+} 
 
-/*     return (
-
-         <p>
-             Componente contenedor de ItemListContainer {props.greeting}
-         </p> 
-    )
-} */
-
-    return (
+    /* return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top" src="https://www.shutterstock.com/image-photo/girls-beautiful-yellow-skinny-trousers-260nw-712737529.jpg" />
             <Card.Body>
@@ -39,7 +42,8 @@ const ItemListContainer = (props) => {
             </Card.Body>
         </Card>
     );
-}
+    
+}*/
 
-//Exportacion:
+//----------Exportacion:--------------
 export default ItemListContainer

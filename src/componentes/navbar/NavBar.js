@@ -27,10 +27,10 @@ const NavBar = (props) => {
                         <Navbar.Brand href="#home">La Tienda</Navbar.Brand>
                         <Nav className="me-auto">
                             <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#home">Productos</Nav.Link>
-                            <Nav.Link href="#features">Categorias</Nav.Link>
-                            <Nav.Link href="#features">Nosotros</Nav.Link>
-                            <Nav.Link href="#features">Carrito</Nav.Link>
+                            <Nav.Link href="#productos">Productos</Nav.Link>
+                            <Nav.Link href="/categoria">Categorias</Nav.Link>
+                            <Nav.Link href="#nosotros">Nosotros</Nav.Link>
+                            <Nav.Link href="#carrito">Carrito</Nav.Link>
                         </Nav>
                     </Container>
                     <CardWidget></CardWidget>

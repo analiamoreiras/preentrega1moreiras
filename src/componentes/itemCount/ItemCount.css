@@ -1,0 +1,16 @@
+.box-count {
+    display: flex;
+
+}
+
+.box-stock {
+    display: flex;
+    flex-direction: row;
+}
+
+.box-count button{
+    background-color: rgb(47, 166, 202);
+    border: none;
+    padding: auto;
+
+}
