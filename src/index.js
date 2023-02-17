@@ -9,36 +9,32 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 //Componentes
-import App from './App';
+//import App from './App';
 import NavBar from './componentes/navbar/NavBar.js';
 import ItemListContainer from './componentes/itemListContainer/ItemListContainer.js';
 import ItemDetailContainer from './componentes/itemDetailContainer/ItemDetailContainer';
 import Footer from './componentes/footer/Footer';
-
+import NotFound from './componentes/notFound/NotFound';
 
 
 import reportWebVitals from './reportWebVitals';
 
-//Logica
+//Logica----------------
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <NavBar></NavBar>
+  
     <BrowserRouter>
+    <NavBar/>
     <Routes>
-      <Route exact path='/' element={<ItemListContainer />}>
-        
-      </Route>
-      <Route exact path='/categoria/:id' element={<ItemListContainer />}>
-
-      </Route>
-      <Route exact path='/item/:id' element={<ItemDetailContainer />}>
-        
-      </Route>
+      <Route path='/' element={<ItemListContainer />}/>
+      <Route path='/categoria/:id' element={<ItemListContainer />}/>
+      <Route path='/item/:id' element={<ItemDetailContainer />}/>
+      <Route path= '*' element={<NotFound/>}/>
     </Routes>
     </BrowserRouter>
     
-    <Footer></Footer>
+    <Footer/>
   </React.StrictMode>
 );
 

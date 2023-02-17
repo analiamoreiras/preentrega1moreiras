@@ -26,7 +26,7 @@ const NavBar = (props) => {
                     <Container>
                         <Navbar.Brand href="#home">La Tienda</Navbar.Brand>
                         <Nav className="me-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="/">Home</Nav.Link>
                             <Nav.Link href="#productos">Productos</Nav.Link>
                             <Nav.Link href="/categoria">Categorias</Nav.Link>
                             <Nav.Link href="#nosotros">Nosotros</Nav.Link>

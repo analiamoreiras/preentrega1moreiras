@@ -4,7 +4,7 @@
         "nombre": "Pantalon",
         "descripcion": "Un pantalon amarillo",
         "precio": 50,
-        "categoria": "Pantalones y Jeans",
+        "categoria": "Pantalones-y-Jeans",
         "stock": 10
     },
     {
@@ -12,7 +12,7 @@
         "nombre": "Remera",
         "descripcion": "Una linda remera",
         "precio": 25,
-        "categoria": "Remeras y Camisas",
+        "categoria": "Remeras-y-Camisas",
         "stock": 15
     },
     { 
@@ -20,7 +20,7 @@
         "nombre": "Sweater",
         "descripcion": "Muy abrigado",
         "precio": 60,
-        "categoria": "Abrigos y Sweaters",
+        "categoria": "Abrigos-y-Sweaters",
         "stock": 20
     },
     {
@@ -28,7 +28,7 @@
         "nombre": "Camisa",
         "descripcion": "Con estilo",
         "precio": 30,
-        "categoria": "Remeras y Camisas",
+        "categoria": "Remeras-y-Camisas",
         "stock": 9
     },
     {

@@ -1,7 +1,7 @@
 //----------importacion:--------------
 
 //Modulos
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 //Estilos
 import './ItemListContainer.css';
@@ -17,12 +17,16 @@ import ItemList from '../itemList/ItemList';
 //-----------Logica:------------
 //
 
-const ItemListContainer = (props) => {
-    const {categoriaId} = useParams()
-     return (
-        
-             <ItemList/>
-         
+const ItemListContainer = () => {
+    const {id} = useParams()
+    // if (id != undefined){
+    //     console.log(<ItemList/>)
+
+    // }else{
+    //     console.log("nada")
+    // }
+    return (
+             <ItemList categoria={id}/>
         //  <div className='main-section'>
         //     <ItemList/>
         //  </div>   
