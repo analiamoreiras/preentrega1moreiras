@@ -10,21 +10,15 @@ import { useParams } from 'react-router-dom'
 
 /*------------ LOGICA ----------*/
 const ItemDetailContainer = () => { //funcion constructora
-const [productos, setProductos] = useState([])
 
-const {productoId} = useParams()
+    const { id } = useParams()
 
-useEffect(()=>{
-    fetch('https://fakestoreapi.com/products/${productoId}')
-    .then(res=>res.json())
-    .then(productos => setProductos(<ItemDetail key={productos.id} id={"producto" + productos.id} data={productos}/>))
-},[productoId])
-
-    return(
-       <section className='itemDetail-box'>
-            <link to="/productos">Regresar a mis productos</link>
-            {productos}
-       </section>
+    return (
+        //    <section className='itemDetail-box'>
+        //         <link to="/producto">Regresar a mis producto</link>
+        //         {producto}
+        //    </section>
+        <ItemDetail productoId={id} />
     )
 
 }

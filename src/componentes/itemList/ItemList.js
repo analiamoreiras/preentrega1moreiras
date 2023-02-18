@@ -6,7 +6,7 @@ import './ItemList.css'
 
 //Componentes
 import Item from '../item/Item'
-import { propTypes } from 'react-bootstrap/esm/Image'
+//import { propTypes } from 'react-bootstrap/esm/Image'
 import { useEffect, useState } from 'react'
 
 
@@ -85,8 +85,8 @@ const ItemList = ({ categoria }) => { //funcion constructora
     //.then(res=>res.json())
     //.then(json.map( productos => <Item key={productos.id} id={"productos" + productos.id} data={productos}/>))
     //.then(ListaDeProductosRenderizables => setProductos(<Item key={productos.id} id={"producto" + productos.id} data={productos}/>))
-    
-    
+
+
     // // // const [productos, setProductos] = useState([])
     // // //     useEffect(() => {
     // // //         fetch('https://fakestoreapi.com/products')
@@ -95,7 +95,7 @@ const ItemList = ({ categoria }) => { //funcion constructora
     // // //     }, [categoria])
 
 
-    //Esto casi anda
+    //Esto anda
     const [productos, setProductos] = useState([])
     useEffect(() => {
         fetch('../milista.json')
@@ -103,12 +103,10 @@ const ItemList = ({ categoria }) => { //funcion constructora
             .then(json => {
                 if (!categoria) {
                     setProductos(json.map(productos => <Item key={productos.id} id={"producto" + productos.id} data={productos} />))
-                }else{
-                    let temporal = json.filter((item) => item.categoria === categoria)
-                    setProductos(json.map(temporal => <Item key={temporal.id} id={"producto" + temporal.id} data={temporal} />))
+                } else {
+                    setProductos(json.filter((item) => item.categoria === categoria).map(unitem => <Item key={unitem.id} id={"producto" + unitem.id} data={unitem} />))
                 }
             })
-            //.then(json => setProductos(json.map(productos => <Item key={productos.id} id={"producto" + productos.id} data={productos} />)))
     }, [categoria])
 
     //2)Transformar estos datos en elementos renderizables
@@ -128,19 +126,19 @@ const ItemList = ({ categoria }) => { //funcion constructora
     // // // //     console.log("no se selecciono categoria");
 
 
-        // const [productos, setProductos] = useState([])
-        // useEffect(() => {
-        //     if (!categoria) {
-        //         fetch('https://fakestoreapi.com/products')
-        //         .then(res => res.json())
-        //         .then(json => {setProductos(json.map(productos => <Item key={productos.id} id={"producto" + productos.id} data={productos} />))})
-        //     }else{
-        //         fetch('https://fakestoreapi.com/products/category/${categoria}')
-        //         .then(res => res.json())
-        //         .then(json => {setProductos(json.map(productos => <Item key={productos.id} id={"producto" + productos.id} data={productos} />))})
-        //     }
-            
-        // }, [categoria])
+    // const [productos, setProductos] = useState([])
+    // useEffect(() => {
+    //     if (!categoria) {
+    //         fetch('https://fakestoreapi.com/products')
+    //         .then(res => res.json())
+    //         .then(json => {setProductos(json.map(productos => <Item key={productos.id} id={"producto" + productos.id} data={productos} />))})
+    //     }else{
+    //         fetch('https://fakestoreapi.com/products/category/${categoria}')
+    //         .then(res => res.json())
+    //         .then(json => {setProductos(json.map(productos => <Item key={productos.id} id={"producto" + productos.id} data={productos} />))})
+    //     }
+
+    // }, [categoria])
 
 
 
@@ -148,7 +146,7 @@ const ItemList = ({ categoria }) => { //funcion constructora
     // // // //     console.log(categoria)
     // // // //     const [productos, setProductos] = useState([])
     // // // //     useEffect(() => {
-            
+
     // // // //     }, [categoria])
     // // // // }
 
@@ -173,8 +171,8 @@ const ItemList = ({ categoria }) => { //funcion constructora
     //     {/* {ListaDeProductosRenderizables} */}
     //     {productos}
     // </div>
-    
-    
+
+
     //const salida = productos.filter(productos => productos.categoria === categoria)
     return (
         //salida
